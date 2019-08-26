@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace oop
 {
@@ -6,7 +7,19 @@ namespace oop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var someShapes = new List<Shape>
+            {
+                new Triangle(),
+                new Circle(),
+                new Rectangle()
+            }; 
+
+            foreach (var t in someShapes)
+            {
+                t.Draw();
+            }
+            // Console.WriteLine("Hello World!");
+            Console.ReadKey();
         }
     }
 }
